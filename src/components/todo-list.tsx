@@ -1,9 +1,9 @@
-import { cn } from "@/lib/utils";
-import { Checkbox } from "./ui/checkbox";
 import { Suspense, type HTMLAttributes } from "react";
-import { Separator } from "./ui/separator";
-import TodoListBodyLoading from "./todo-list-body/loading";
+import { cn } from "@/lib/utils";
 import TodoListBody from "./todo-list-body";
+import TodoListBodyLoading from "./todo-list-body/loading";
+import { Checkbox } from "./ui/checkbox";
+import { Separator } from "./ui/separator";
 
 export type TodoListProps = {
   completed?: boolean;

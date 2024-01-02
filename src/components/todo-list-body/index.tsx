@@ -1,11 +1,12 @@
 "use client";
-import TodoListBodyLoading from "./loading";
+
 import dayjs from "dayjs";
 import { Fragment } from "react";
-import { Separator } from "../ui/separator";
-import TodoListItem from "../todo-list-item";
 import { todoSchema } from "@/lib/schemas";
 import { api } from "@/trpc/react";
+import TodoListItem from "../todo-list-item";
+import { Separator } from "../ui/separator";
+import TodoListBodyLoading from "./loading";
 
 export default function TodoListBody({ completed }: { completed?: boolean }) {
   const { data: todos, isLoading } = api.todos.getAll.useQuery();

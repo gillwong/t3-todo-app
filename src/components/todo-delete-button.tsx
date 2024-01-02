@@ -1,8 +1,9 @@
 "use client";
 
-import { type Todo } from "@/lib/schemas";
-import { useToast } from "./ui/use-toast";
+import { Trash } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { type Todo } from "@/lib/schemas";
+import { api } from "@/trpc/react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -15,8 +16,7 @@ import {
   AlertDialogTrigger,
 } from "./ui/alert-dialog";
 import { Button } from "./ui/button";
-import { Trash } from "lucide-react";
-import { api } from "@/trpc/react";
+import { useToast } from "./ui/use-toast";
 
 export default function TodoDeleteButton({ todo }: { todo: Todo }) {
   const router = useRouter();

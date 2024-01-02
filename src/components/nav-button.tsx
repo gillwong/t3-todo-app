@@ -1,7 +1,7 @@
-import { type Url } from "url";
-import { Button, type ButtonProps } from "./ui/button";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { type Url } from "url";
+import { cn } from "@/lib/utils";
+import { Button, type ButtonProps } from "./ui/button";
 
 export type NavButtonProps = {
   href: string | Url;

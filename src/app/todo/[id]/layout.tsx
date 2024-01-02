@@ -1,9 +1,8 @@
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-
-import { Separator } from "@/components/ui/separator";
 import TodoHeader from "@/components/todo-header";
 import TodoHeaderLoading from "@/components/todo-header/loading";
+import { Separator } from "@/components/ui/separator";
 
 export default function TodoPageLayout({
   params,

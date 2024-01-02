@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { createTRPCRouter, publicProcedure } from "../trpc";
 import { todoSchema } from "@/lib/schemas";
+import { createTRPCRouter, publicProcedure } from "../trpc";
 
 const todosRouter = createTRPCRouter({
   getAll: publicProcedure.query(({ ctx }) => {

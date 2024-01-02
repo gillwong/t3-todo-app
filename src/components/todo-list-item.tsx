@@ -1,8 +1,8 @@
-import { type Todo } from "@/lib/schemas";
-import { cn } from "@/lib/utils";
 import dayjs from "dayjs";
 import Link from "next/link";
 import { type HTMLAttributes } from "react";
+import { type Todo } from "@/lib/schemas";
+import { cn } from "@/lib/utils";
 import PriorityIndicator from "./priority-indicator";
 import TodoCheckbox from "./todo-checkbox";
 

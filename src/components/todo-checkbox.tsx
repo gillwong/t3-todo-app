@@ -1,9 +1,9 @@
 "use client";
 
-import { type Todo } from "@/lib/schemas";
-import { Checkbox } from "./ui/checkbox";
 import { useEffect, useState } from "react";
+import { type Todo } from "@/lib/schemas";
 import { api } from "@/trpc/react";
+import { Checkbox } from "./ui/checkbox";
 
 export type TodoCheckboxProps = {
   className?: string;

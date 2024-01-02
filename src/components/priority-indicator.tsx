@@ -1,11 +1,11 @@
 import { type Todo } from "@/lib/schemas";
+import { capitalizeFirstLetter, cn } from "@/lib/utils";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
-import { capitalizeFirstLetter, cn } from "@/lib/utils";
 
 export type PriorityIndicatorProps = {
   priority?: Todo["priority"];

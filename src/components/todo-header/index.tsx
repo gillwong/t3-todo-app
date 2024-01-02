@@ -1,8 +1,9 @@
 "use client";
-import { api } from "@/trpc/react";
+
 import { notFound } from "next/navigation";
-import TodoCheckbox from "../todo-checkbox";
 import { todoSchema } from "@/lib/schemas";
+import { api } from "@/trpc/react";
+import TodoCheckbox from "../todo-checkbox";
 import TodoHeaderLoading from "./loading";
 
 export default function TodoHeader({ todoId }: { todoId: number }) {

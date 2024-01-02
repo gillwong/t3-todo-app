@@ -1,8 +1,8 @@
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
 import { type Todo } from "@/lib/schemas";
 import { capitalizeFirstLetter } from "@/lib/utils";
 import { Separator } from "./ui/separator";
-import dayjs from "dayjs";
-import localizedFormat from "dayjs/plugin/localizedFormat";
 
 dayjs.extend(localizedFormat);
 

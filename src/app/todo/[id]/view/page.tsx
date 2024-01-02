@@ -1,8 +1,8 @@
+import { notFound } from "next/navigation";
+import { todoSchema } from "@/lib/schemas";
 import TodoActions from "@/components/todo-actions";
 import TodoBody from "@/components/todo-body";
-import { todoSchema } from "@/lib/schemas";
 import { api } from "@/trpc/server";
-import { notFound } from "next/navigation";
 
 export default async function ViewTodo({ params }: { params: { id: string } }) {
   const id = parseInt(params.id);

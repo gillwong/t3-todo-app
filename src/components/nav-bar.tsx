@@ -1,6 +1,10 @@
-import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { type HTMLAttributes } from "react";
+import { cn } from "@/lib/utils";
+import NavButton from "./nav-button";
+import { Button } from "./ui/button";
+import { Separator } from "./ui/separator";
 import {
   Sheet,
   SheetClose,
@@ -9,10 +13,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
-import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
-import { Separator } from "./ui/separator";
-import NavButton from "./nav-button";
 
 export default function NavBar({
   className,
