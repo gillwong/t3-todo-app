@@ -1,15 +1,11 @@
-"use client";
-
 import { notFound } from "next/navigation";
 import { todoSchema } from "@/lib/schemas";
-import { api } from "@/trpc/react";
+import { api } from "@/trpc/server";
 import TodoCheckbox from "../todo-checkbox";
-import TodoHeaderLoading from "./loading";
 
-export default function TodoHeader({ todoId }: { todoId: number }) {
-  const { data: todo, isLoading } = api.todos.getById.useQuery(todoId);
+export default async function TodoHeader({ todoId }: { todoId: number }) {
+  const todo = await api.todos.getById.query(todoId);
 
-  if (isLoading || todo === undefined) return <TodoHeaderLoading />;
   if (todo === null) return notFound();
 
   return (

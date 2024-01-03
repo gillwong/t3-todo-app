@@ -33,6 +33,7 @@ export default function TodoCheckbox({
   }, [todo, isSuccess]);
 
   function handleClick() {
+    setIsCompleted((prev) => !prev);
     updateTodo.mutate({
       ...tempTodo,
       is_completed: !(todo?.is_completed ?? false),

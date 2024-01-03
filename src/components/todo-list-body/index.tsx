@@ -1,17 +1,16 @@
-"use client";
-
 import dayjs from "dayjs";
 import { Fragment } from "react";
 import { todoSchema } from "@/lib/schemas";
-import { api } from "@/trpc/react";
+import { api } from "@/trpc/server";
 import TodoListItem from "../todo-list-item";
 import { Separator } from "../ui/separator";
-import TodoListBodyLoading from "./loading";
 
-export default function TodoListBody({ completed }: { completed?: boolean }) {
-  const { data: todos, isLoading } = api.todos.getAll.useQuery();
-
-  if (isLoading || todos === undefined) return <TodoListBodyLoading />;
+export default async function TodoListBody({
+  completed,
+}: {
+  completed?: boolean;
+}) {
+  const todos = await api.todos.getAll.query();
 
   const sortedTodos = [...todos].sort((a, b) => {
     if (!a.due && !b.due) return 0;
