@@ -5,8 +5,8 @@ export const todoSchema = z.object({
   title: z.string().max(150),
   description: z.string(),
   is_completed: z.boolean().default(false),
-  priority: z.enum(["LOW", "MEDIUM", "HIGH"]).optional(),
-  due: z.date().optional(),
+  priority: z.enum(["LOW", "MEDIUM", "HIGH"]).nullish(),
+  due: z.date().nullish(),
 });
 
 export type Todo = z.infer<typeof todoSchema>;
