@@ -83,7 +83,7 @@ export default function EditTodoForm({ todo }: { todo: Todo }) {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Priority</FormLabel>
-              <Select value={field.value} onValueChange={field.onChange}>
+              <Select value={field.value ?? undefined} onValueChange={field.onChange}>
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder="Select todo priority" />
